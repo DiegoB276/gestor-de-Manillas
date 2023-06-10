@@ -49,8 +49,6 @@ class _PaymentPageState extends State<PaymentPage> {
     }
   }
 
-  // In order to get hot reload to work we need to pause the camera if the platform
-  // is android, or resume the camera if the platform is iOS.
   @override
   void reassemble() {
     super.reassemble();
@@ -168,6 +166,18 @@ class _PaymentPageState extends State<PaymentPage> {
                       ),
                     ],
                   ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  Center(
+                    child: Text(
+                      "El valor de la entrada por persona tiene un costo de \$5.000",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
                   const SizedBox(height: 20),
                   statusQRButton
                       ? Column(
@@ -219,7 +229,7 @@ class _PaymentPageState extends State<PaymentPage> {
                         ),
 
                   //Buttons
-                  const SizedBox(height: 70),
+                  const SizedBox(height: 50),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

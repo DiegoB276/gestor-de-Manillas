@@ -1,8 +1,7 @@
 import 'package:postgres/postgres.dart';
 
 class DataHelper {
-  final connection = PostgreSQLConnection(
-      "###", 5432, "###",
+  final connection = PostgreSQLConnection("###", 5432, "###",
       username: "###", password: "###");
 
 //Añadir una Nueva manilla
@@ -54,7 +53,7 @@ class DataHelper {
     await connection.open();
 
     final query =
-        'UPDATE #### SET saldo_manilla = (saldo_manilla - @price_manilla) WHERE id_manilla = @id_bracelet';
+        'UPDATE ### SET saldo_manilla = (saldo_manilla - @price_manilla) WHERE id_manilla = @id_bracelet';
 
     final values = {
       'price_manilla': price,
